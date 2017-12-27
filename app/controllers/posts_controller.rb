@@ -10,17 +10,19 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @categories = Category.all
   end
 
  
   def edit
+    @categories = Category.all
     renderiza(:edit)
   end 
 
   def create
     @post = Post.new(post_params)
   
-    if @membro.save
+    if @post.save
       flash[:notice] = "Post criado com sucesso"
       redirect_to posts_path
     else
