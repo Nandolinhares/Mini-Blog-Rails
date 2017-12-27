@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Bootstrap
 gem 'twitter-bootstrap-rails'
+#Scope
+gem 'has_scope'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

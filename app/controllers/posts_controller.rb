@@ -8,6 +8,11 @@ class PostsController < ApplicationController
   def show
   end
 
+  def busca
+    @post_a_buscar = params[:name]
+    @posts_buscados = Post.where "name like ?","%#{@post_a_buscar}%"
+  end
+ 
   def new
     @post = Post.new
     @categories = Category.all

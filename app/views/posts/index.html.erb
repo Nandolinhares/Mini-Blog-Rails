@@ -2,32 +2,22 @@
 
 <h1>Listing Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Body</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= render partial:"inputBusca"  %>
 
-  <tbody>
-    <% @posts.each do |post| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= post.name %></td>
-        <td><%= post.description %></td>
-        <td><%= post.body %></td>
-        <td><%= post.category.name %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Body</th>
+        <th>Category</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <%= render partial:"post", collection:@posts %>
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Novo Post', new_post_path %> 
+

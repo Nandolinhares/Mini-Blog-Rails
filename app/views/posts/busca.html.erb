@@ -1,0 +1,17 @@
+<h2>Resultados da busca</h2>
+<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Descrição</th> 
+					<th>Corpo do post</th>
+					<th>Categoria</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<%= render partial: "post", collection: @posts_buscados %>	
+				
+			</tbody>
+		</table>
