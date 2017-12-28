@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 
 # Bootstrap
 gem 'twitter-bootstrap-rails'
-#Scope
-gem 'has_scope'
+# Ck Editor
+gem 'ckeditor'
+# Paperclip
+gem 'paperclip'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
