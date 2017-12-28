@@ -2,19 +2,21 @@
     <div class="alert alert-success" role="alert"><%= flash[:notice] %></div> 
   <% end %>
 
+  
+
   <%= render partial:"inputBusca"  %>
 
-<div class=" row navbar-right">
-  <%= link_to 'Novo Post', new_post_path, class:"btn btn-primary button_tables button_add_post" %> 
-</div>
+	<div class=" row navbar-right">
+	  <%= link_to 'Novo Post', new_post_path, class:"btn btn-primary button_tables button_add_post" %> 
+	</div>
 
-<h2>Posts</h2>
-<br>
+	<h2>Posts</h2>
+	<br>
 
-<div class="row">
- <%= render partial:"post", collection:@posts %>
-</div>
+	<div class="row">
+	 <%= render partial:"post", collection:@posts %>
+	</div>
 
-<br>
+	<br>
 
 

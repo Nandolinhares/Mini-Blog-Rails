@@ -1,0 +1,8 @@
+<%= form_tag busca_categories_path, method: :get, class: "navbar-form navbar-right" do %>
+  <div class="form-group">
+    <%= text_field_tag :category_id, @categoria_a_buscar, class: "form-control", placeholder:"Buscar por id " %>
+     <!-- Tenho que passar o nil porque não pertence a um form. Não tem um objeto. É vazio -->
+     <%= button_to "Buscar",nil, class: "btn btn-default" %>
+  </div>
+<% end %>
+ 
