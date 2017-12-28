@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171228162732) do
+ActiveRecord::Schema.define(version: 20171228184131) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -38,8 +38,12 @@ ActiveRecord::Schema.define(version: 20171228162732) do
     t.string   "description"
     t.text     "body"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id"

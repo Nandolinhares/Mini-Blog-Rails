@@ -17,3 +17,7 @@
  .button_tables{
  	color: #fff !important;
  }
+ .main_image_width{
+ 	margin: 0 auto;
+ 	display: table;
+ }

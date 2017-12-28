@@ -1,25 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+<div class="post_view">
+	<p>
+	  <h1><%= @post.name %></h1>
+	</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
+	<p><%= image_tag @post.avatar.url, class:"main_image_width" %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body.html_safe %>
-</p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @post.category.name %>
-</p>
+	<p>
+	 <h3><%= @post.description %></h3>
+	</p>
 
-<%= link_to 'Editar', edit_post_path(@post), class:"btn btn-warning button_tables" %> |
-<%= link_to 'Deletar', @post, method: :delete, data: { confirm: "Tem certeza que deseja deletar o post '#{@post.name}'? " }, class:"btn btn-danger button_tables" %> |
-<%= link_to 'Voltar', posts_path, class:"btn btn-default" %>
+	<p>
+	  <%= @post.body.html_safe %>
+	</p>
+
+	<p>
+	  <strong>Categoria:</strong>
+	  <%= @post.category.name %>
+	</p>
+
+	<%= link_to 'Editar', edit_post_path(@post), class:"btn btn-warning button_tables" %> |
+	<%= link_to 'Deletar', @post, method: :delete, data: { confirm: "Tem certeza que deseja deletar o post '#{@post.name}'? " }, class:"btn btn-danger button_tables" %> |
+	<%= link_to 'Voltar', posts_path, class:"btn btn-default" %>
+
+</div>
+
