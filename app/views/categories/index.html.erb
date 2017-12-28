@@ -2,28 +2,30 @@
     <div class="alert alert-success" role="alert"><%= flash[:notice] %></div> 
   <% end %>
 
-<h1 class="h1_category">Categorias</h1>
+  <h1 class="h1_category">Categorias</h1>
 
-<table class="table table-bordered table_category">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th class="category_buttons">Visualizar</th>
-      <th class="category_buttons">Editar</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
+  <table class="table table-bordered table_category">
+    <thead>
       <tr>
-        <td><%= category.name %></td>
-        <td><%= link_to 'Visualizar', category, class:"btn btn-success button_tables" %></td>
-        <td><%= link_to 'Editar', edit_category_path(category), class:"btn btn-warning button_tables", data:{confirm:"Deseja editar a categoria: #{category.name}"} %></td>
+        <th>Nome</th>
+        <th class="category_buttons">Visualizar</th>
+        <th class="category_buttons">Editar</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <!-- Parte de adição, edição e exclusão de categorias -->
 
-<%= link_to 'Adicionar Categoria', new_category_path, class:"btn btn-primary button_tables button_add" %>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.name %></td>
+          <td><%= link_to 'Visualizar', category, class:"btn btn-success button_tables" %></td>
+          <td><%= link_to 'Editar', edit_category_path(category), class:"btn btn-warning button_tables", data:{confirm:"Deseja editar a categoria: #{category.name}"} %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Adicionar Categoria', new_category_path, class:"btn btn-primary button_tables button_add" %>

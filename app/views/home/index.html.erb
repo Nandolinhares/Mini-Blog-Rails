@@ -1,10 +1,13 @@
   <% if flash[:notice] %>
     <div class="alert alert-success" role="alert"><%= flash[:notice] %></div> 
   <% end %>
-  	
+
 	<%= render partial:"inputBusca"  %>
 
 	<h1>Bem Vindo a página inicial do blog</h1>
+
+	<!-- Adicionando o id e nome de categoria para realizar a
+		 a busca por categoria -->
 
 		<h4>Categorias:</h4>
 			<% @categories.each do |category| %>
